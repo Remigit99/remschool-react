@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  --lg-container-width: 80%;
+  --md-container-width: 90%;
+  --sm-container-width: 96%;
+
+}
+
+
+body {
+  font-family: 'Nunito', Mulish;
+}
+
+.container {
+  margin: 0 auto;
+  width: var(--lg-container-width);
+}
+
+ul>a {
+  position: relative;
+  transition: all 400ms ease-in-out;
+}
+
+Ul>a.active::after {
+  content: '';
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgb(254 243 199);
+  position: absolute;
+  left: calc(50% - 0.7rem);
+  transform: rotate(45deg);
+  bottom: -1.7rem;
+
+
+}
+
+ul>a.active {
+  font-weight: 700;
+}
