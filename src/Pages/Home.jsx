@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
             <header className='pt-24'>
-                <div className="container header__container grid grid-cols-2 gap-x-10 place-items-center">
+                <div className="container header__container grid grid-cols-2 gap-x-10 place-items-center md:grid-cols-1">
 
                     <div className="header__left">
                         <h1 className='text-5xl font-bold'>

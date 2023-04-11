@@ -16,17 +16,28 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <ul className='flex gap-14'>
+                <ul className='nav__links flex gap-14 '>
 
-                    <NavLink to='/' className='text-blue-500'>Home</NavLink>
-                    <NavLink to='/about' className='text-blue-500'>About</NavLink>
-                    <NavLink to='/courses' className='text-blue-500'>Courses</NavLink>
-                    <NavLink to='/contact' className='text-blue-500'>Contact</NavLink>
+                    <li>
+                        <NavLink to='/' className='text-blue-500'>Home</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to='/about' className='text-blue-500'>About</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to='/courses' className='text-blue-500'>Courses</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to='/contact' className='text-blue-500'>Contact</NavLink>
+                    </li>
 
                 </ul>
 
                 <button>
-                    <CiMenuFries />
+                    <CiMenuFries className='text-blue-500 text-3xl lg:hidden md:block sm:block' />
                 </button>
             </div>
         </nav>
