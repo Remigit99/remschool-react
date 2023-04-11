@@ -1,12 +1,13 @@
-
+import { useState } from 'react';
 import HeaderSvg from '../assets/header.svg';
 
 
 const Home = () => {
+
     return (
         <>
             <header className='pt-24'>
-                <div className="container header__container grid grid-cols-2 gap-x-10 place-items-center md:grid-cols-1">
+                <div className="container header__container grid grid-cols-2 gap-x-10 place-items-center sm:">
 
                     <div className="header__left">
                         <h1 className='text-5xl font-bold'>

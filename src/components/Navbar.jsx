@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { CiMenuFries } from 'react-icons/ci';
+import { GrClose } from 'react-icons/gr'
 
 const Navbar = () => {
 
+    const { showNav, setShowNav } = useState(false);
 
+    // const handleShowNav = () => {
+    //     setShowNav(!showNav)
+    // }
 
     return (
         <nav className='w-full grid place-items-center bg-amber-100'>
@@ -37,7 +42,12 @@ const Navbar = () => {
                 </ul>
 
                 <button>
-                    <CiMenuFries className='text-blue-500 text-3xl lg:hidden md:block sm:block' />
+                    {
+                        showNav ?
+                            <CiMenuFries className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav(!showNav)} /> :
+                            <GrClose className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav(!showNav)} />
+
+                    }
                 </button>
             </div>
         </nav>

@@ -11,6 +11,8 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  --clr-bg-2: rgb(254 243 199);
+
   --lg-container-width: 80%;
   --md-container-width: 90%;
   --sm-container-width: 96%;
@@ -39,7 +41,7 @@ ul>a.active::after {
   content: '';
   width: 1.4rem;
   height: 1.4rem;
-  background-color: rgb(254 243 199);
+  background-color: var(--clr-bg-2);
   position: absolute;
   left: calc(50% - 0.7rem);
   transform: rotate(45deg);
@@ -63,7 +65,7 @@ ul>a.active {
 
   .nav__links {
     position: absolute;
-    top: 5rem;
+    top: 4.2rem;
     flex-direction: column;
     right: 5%;
     gap: 0;
@@ -77,6 +79,8 @@ ul>a.active {
     padding: 1rem 3rem;
     width: 100%;
     height: 5rem;
+    background-color: var(--clr-bg-2);
+    box-shadow: -2rem 2rem 6rem rgba(0, 0, 0, 0.15);
   }
 
   .nav__links li a {
