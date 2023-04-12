@@ -28,11 +28,13 @@ const Home = () => {
             </header>
 
             <section id="#categories">
-                <div className="container categories__container">
-                    <h2>Categories</h2>
+
+                <h2 className='align-center text-3xl'>Categories</h2>
+
+                <div className="container categories__container grid grid-cols-[1fr_1.8fr] gap-12">
 
                     <div className="categories__left">
-                        <h3>Our Categories Content</h3>
+                        <h3 className='text-3xl'>Our Categories Content</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptatum ab nihil. Illum laboriosam recusandae suscipit voluptatibus facere libero velit.</p>
 
                         <Link to='/categories'>
@@ -40,16 +42,16 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <div className="categories__right">
+                    <div className="categories__right grid grid-cols-3 gap-6">
 
                         {
                             categories.map(({ icon, name, desc }) => {
 
                                 return (
-                                    <article className="category" key={name}>
-                                        {icon}
-                                        <h4>{name}</h4>
-                                        <p>{desc}</p>
+                                    <article className="category  bg-cyan-800 p-4 rounded-lg" key={name}>
+                                        <span className='mt-4 text-2xl'>{icon}</span>
+                                        <h4 className='mt-4'>{name}</h4>
+                                        <p className='mt-4 text-[0.95rem] text-gray-400' >{desc}</p>
                                     </article>
                                 )
                             })

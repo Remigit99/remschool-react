@@ -32,6 +32,10 @@ body {
   width: var(--lg-container-width);
 }
 
+section {
+  padding: 5rem 0;
+}
+
 ul>a {
   position: relative;
   transition: all 400ms ease-in-out;
