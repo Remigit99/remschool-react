@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { categories } from '../Content';
 import HeaderSvg from '../assets/header.svg';
 
 
@@ -24,6 +26,37 @@ const Home = () => {
                     </div>
                 </div>
             </header>
+
+            <section id="#categories">
+                <div className="container categories__container">
+                    <h2>Categories</h2>
+
+                    <div className="categories__left">
+                        <h3>Our Categories Content</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptatum ab nihil. Illum laboriosam recusandae suscipit voluptatibus facere libero velit.</p>
+
+                        <Link to='/categories'>
+                            Learn More
+                        </Link>
+                    </div>
+
+                    <div className="categories__right">
+
+                        {
+                            categories.map(({ icon, name, desc }) => {
+
+                                <article className="category" key={name}>
+                                    {icon}
+                                    <h4>{name}</h4>
+                                    <p>{desc}</p>
+                                </article>
+                            })
+                        }
+
+                    </div>
+
+                </div>
+            </section>
         </>
     )
 }
