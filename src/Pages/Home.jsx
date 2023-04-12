@@ -45,11 +45,13 @@ const Home = () => {
                         {
                             categories.map(({ icon, name, desc }) => {
 
-                                <article className="category" key={name}>
-                                    {icon}
-                                    <h4>{name}</h4>
-                                    <p>{desc}</p>
-                                </article>
+                                return (
+                                    <article className="category" key={name}>
+                                        {icon}
+                                        <h4>{name}</h4>
+                                        <p>{desc}</p>
+                                    </article>
+                                )
                             })
                         }
 
