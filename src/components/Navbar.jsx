@@ -5,7 +5,7 @@ import { GrClose } from 'react-icons/gr'
 
 const Navbar = () => {
 
-    const { showNav, setShowNav } = useState(false);
+    const { showNav, setShowNav } = useState(true);
 
     // const handleShowNav = () => {
     //     setShowNav(!showNav)
@@ -44,8 +44,8 @@ const Navbar = () => {
                 <button>
                     {
                         showNav ?
-                            <CiMenuFries className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav(!showNav)} /> :
-                            <GrClose className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav(!showNav)} />
+                            <CiMenuFries className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav((prev) => !prev)} /> :
+                            <GrClose className='text-blue-500 text-3xl lg:hidden md:block sm:block ' onClick={() => setShowNav((prev) => !prev)} />
 
                     }
                 </button>
