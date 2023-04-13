@@ -30,6 +30,15 @@ import C16 from './assets/course16.jpg';
 import C17 from './assets/course17.jpg';
 import C18 from './assets/course18.jpg';
 
+// Avatar
+
+import AVR1 from './assets/avatar1.jpg';
+import AVR2 from './assets/avatar2.jpg';
+import AVR3 from './assets/avatar3.jpg';
+import AVR4 from './assets/avatar4.jpg';
+import AVR5 from './assets/avatar5.jpg';
+import AVR6 from './assets/avatar6.jpg';
+
 
 export const categories = [
     {
@@ -248,6 +257,47 @@ export const faqs = [
         question: 'How do I know the right course(s) for me?',
         answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
 
+    },
+
+]
+
+
+export const testimonials = [
+    {
+        id: 1,
+        avatar: AVR1,
+        name: 'Ilelaboye',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
+    },
+    {
+        id: 2,
+        avatar: AVR2,
+        name: 'James',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
+    },
+    {
+        id: 3,
+        avatar: AVR3,
+        name: 'Akinleye',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
+    },
+    {
+        id: 4,
+        avatar: AVR4,
+        name: 'Oyindamola',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
+    },
+    {
+        id: 5,
+        avatar: AVR5,
+        name: 'Adeola',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
+    },
+    {
+        id: 6,
+        avatar: AVR6,
+        name: 'Yemisi',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reprehenderit tempore? Esse, quia natus recusandae cupiditate autem totam'
     },
 
 ]

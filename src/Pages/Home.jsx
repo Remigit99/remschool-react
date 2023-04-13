@@ -5,6 +5,20 @@ import HeaderSvg from '../assets/header.svg';
 import { BsPlusLg } from 'react-icons/bs';
 import { FiMinus } from 'react-icons/fi';
 import { faqs } from '../Content';
+import { testimonials } from '../Content';
+
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
+
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/pagination";
+import "swiper/css/pagination";
 
 
 const Home = () => {
@@ -131,6 +145,40 @@ const Home = () => {
                         })
                     }
                 </div>
+            </section>
+
+            <section id="testimonials">
+                <h2>Testimonials</h2>
+                <Swiper className="container testimonial__container mySwiper"
+
+                    cssMode={true}
+                    navigation={true}
+                    pagination={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+                >
+                    {
+                        testimonials.map(({ id, avatar, name, message }) => {
+                            return (
+                                <SwiperSlide className="testimonial grid place-items-center" key={id}>
+                                    <div className="avatar rounded-full overflow-hidden w-20 ">
+                                        <img src={avatar} alt={name} className='' />
+                                    </div>
+                                    <h5 className='text-xl my-6'>{name}</h5>
+                                    <p className='text-gray-400 bg-cyan-800 text-center p-4 mt-10'>{message}</p>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+
+                    {/* If we need pagination */}
+                    {/* <div className="swiper-pagination bg-cyan-800 mt-20"></div> */}
+
+                    {/* If we need navigation buttons */}
+                    {/* <div className="swiper-button-prev text-cyan-800"></div>
+                    <div className="swiper-button-next text-cyan-800"></div> */}
+                </Swiper>
             </section>
         </>
     )
