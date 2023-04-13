@@ -118,6 +118,10 @@ ul>a.active {
 }
 
 .show__ans {
+  display: block;
+}
+
+.hide__ans {
   display: none;
 }
 

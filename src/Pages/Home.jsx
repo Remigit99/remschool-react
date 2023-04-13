@@ -11,6 +11,10 @@ const Home = () => {
 
     const [showAnswer, setShowAnswer] = useState(false);
 
+    const handleShowAns = () => {
+        setShowAnswer((prev) => !prev)
+    }
+
     return (
         <>
             <header className='pt-24'>
@@ -97,13 +101,16 @@ const Home = () => {
             </section>
 
             <section id="faqs">
-                <h2>Frequently Asked Questions</h2>
+                <h2 className=' text-3xl'>Frequently Asked Questions</h2>
 
                 <div className="container faqs__container grid lg:grid-cols-2 sm:grid-cols-1 gap-12">
                     {
                         faqs.map(({ id, question, answer }) => {
+
+                            // const [selectedFaq, setSelectedFaq] = useState(null);
+
                             return (
-                                <article className="faq flex gap-4 p-4" key={id}>
+                                <article className="faq flex gap-4 p-4 cursor-pointer" key={id} onClick={handleShowAns}>
                                     <span>
                                         {
                                             showAnswer ? <FiMinus className='cursor-pointer' /> :
@@ -113,7 +120,11 @@ const Home = () => {
                                     </span>
                                     <div className="question__answer">
                                         <h5>{question}</h5>
-                                        <p className='text-gray-400 py-4 show__ans'>{answer}</p>
+
+                                        {
+                                            showAnswer && <p className={`text-gray-400 py-4 `} >{answer}</p>
+                                        }
+
                                     </div>
                                 </article>
                             )
