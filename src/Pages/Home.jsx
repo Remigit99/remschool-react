@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { categories } from '../Content';
+import { categories, courses } from '../Content';
 import HeaderSvg from '../assets/header.svg';
 
 
@@ -29,13 +29,13 @@ const Home = () => {
 
             <section id="#categories">
 
-                <h2 className='align-center text-3xl'>Categories</h2>
+                <h2 className='align-center text-2xl'>Categories</h2>
 
-                <div className="container categories__container grid grid-cols-[1fr_1.8fr] gap-12">
+                <div className="container categories__container grid lg:grid-cols-[1fr_1.8fr] gap-12 sm:grid sm:grid-cols-[1fr]">
 
                     <div className="categories__left">
-                        <h3 className='text-3xl'>Our Categories Content</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptatum ab nihil. Illum laboriosam recusandae suscipit voluptatibus facere libero velit.</p>
+                        <h3 className='text-xl'>Our Categories Content</h3>
+                        <p className='text-gray-400 mt-6 mb-10 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptatum ab nihil. Illum laboriosam recusandae suscipit voluptatibus facere libero velit.</p>
 
                         <Link to='/categories'>
                             Learn More
@@ -59,6 +59,35 @@ const Home = () => {
 
                     </div>
 
+                </div>
+            </section>
+
+            <section id="courses">
+                <h2 className="text-3xl" >Our Courses</h2>
+                <div className="container courses__container grid lg:grid-cols-3 gap-12">
+
+                    {
+                        courses.map(({ id, img, title, desc }) => {
+
+                            courses.length = 9;
+
+                            return (
+                                <article className="course bg-cyan-800 rouned-lg" key={id}>
+                                    <div className="course__shot">
+                                        <img src={img} alt={title} />
+                                    </div>
+
+                                    <div className="course__info p-4 text-center">
+                                        <h4 className='text-xl mb-3'>{title}</h4>
+                                        <p className='text-gray-400'>{desc}</p>
+
+                                    </div>
+
+                                </article>
+                            )
+                        })
+
+                    }
                 </div>
             </section>
         </>
