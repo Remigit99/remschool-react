@@ -2,9 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { categories, courses } from '../Content';
 import HeaderSvg from '../assets/header.svg';
+import { BsPlusLg } from 'react-icons/bs';
+import { FiMinus } from 'react-icons/fi';
+import { faqs } from '../Content';
 
 
 const Home = () => {
+
+    const [showAnswer, setShowAnswer] = useState(false);
 
     return (
         <>
@@ -87,6 +92,32 @@ const Home = () => {
                             )
                         })
 
+                    }
+                </div>
+            </section>
+
+            <section id="faqs">
+                <h2>Frequently Asked Questions</h2>
+
+                <div className="container faqs__container grid lg:grid-cols-2 sm:grid-cols-1 gap-12">
+                    {
+                        faqs.map(({ id, question, answer }) => {
+                            return (
+                                <article className="faq flex gap-4 p-4" key={id}>
+                                    <span>
+                                        {
+                                            showAnswer ? <FiMinus className='cursor-pointer' /> :
+                                                <BsPlusLg className='cursor-pointer text-white' />
+
+                                        }
+                                    </span>
+                                    <div className="question__answer">
+                                        <h5>{question}</h5>
+                                        <p className='text-gray-400 py-4 show__ans'>{answer}</p>
+                                    </div>
+                                </article>
+                            )
+                        })
                     }
                 </div>
             </section>

@@ -197,3 +197,57 @@ export const courses = [
 
 
 ]
+
+
+export const faqs = [
+    {
+        id: 'q1',
+        question: 'How do I know the right course(s) for me?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+
+    {
+        id: 'q2',
+        question: 'Do I get a Certificate for every course I take?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q3',
+        question: `Do I get a refund if the course isn't worth my money?`,
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q4',
+        question: 'Will I have a lifetime access to courses I purchase?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q5',
+        question: 'Will you assist me to get my first job?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q6',
+        question: 'What are your payment options?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q7',
+        question: 'Do I get source code from projects?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+    {
+        id: 'q8',
+        question: 'How do I know the right course(s) for me?',
+        answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum repudiandae repellat? Id, laudantium ab.'
+
+    },
+
+]

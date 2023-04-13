@@ -111,6 +111,17 @@ ul>a.active {
 }
 
 
+/*======== FAQS ============*/
+
+.faq {
+  background-color: var(--color-bg2);
+}
+
+.show__ans {
+  display: none;
+}
+
+/*============ MEDIA QUERY ( TABLET DEVICES) ====*/
 
 @media screen and (max-width: 64em) {
 
